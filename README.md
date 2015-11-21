@@ -5,15 +5,10 @@
 
 [Stripe.js Frontend](https://stripe.com/docs/stripe.js)
 
-**Stripe test keys**   
-Secret key: `sk_0A8x1zlW83ietTOaHbzWwdhP9Ueiw`
-Public key: `pk_0A8x7oqLXhsVd0b9QG6objJUrevbA`
 
-<!--
 ### Stripe Live
 Secret key: `sk_0A8xJz54EqeefDQAl6n1ZqUT82VwX`
 Public key: `pk_0A8xerxuWrYLPjvPHU4E6QDiHQcag`
--->
   
   
   
