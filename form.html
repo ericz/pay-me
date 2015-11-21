@@ -1,0 +1,37 @@
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+
+
+<script>
+  Stripe.setPublishableKey('pk_0A8x7oqLXhsVd0b9QG6objJUrevbA');
+
+  function createToken() {
+    Stripe.card.createToken({
+      number: ccNumber.value,
+      cvc: ccCVC.value,
+      exp_month: ccMonth.value,
+      exp_year: ccYear.value,
+      name: ccName.value
+    }, function(status, response){
+      console.log(1);
+      console.log(status,response);
+      resultStatus.textContent = status;
+      resultResponse.textContent = JSON.stringify(response, null, 2);
+    });
+  }
+
+</script>
+
+
+<input id="ccNumber" type="text" placeholder="Credit card number"><br>
+<input id="ccCVC" type="text" placeholder="CVC"><br>
+<input id="ccMonth" type="text" placeholder="Expiration Month"><br>
+<input id="ccYear" type="text" placeholder="Expiration Year"><br>
+<input id="ccName" type="text" placeholder="Your name"><br>
+
+<input type="button" onclick="createToken()" value="Submit"><br>
+
+Status:<br>
+<h2 id="resultStatus"></h2>
+
+Response:<br>
+<pre id="resultResponse"></pre>
